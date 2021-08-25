@@ -4,13 +4,17 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { MaterialModule } from '../material/material.module';
+
 
 
 @NgModule({
-  declarations: [MenuComponent, FooterComponent],
+  declarations: [ HomeComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }

@@ -1,6 +1,7 @@
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+
 @use '~@angular/material' as mat;
 // Plus imports for other components in your app.
 
@@ -14,13 +15,37 @@ $shopping-palette: (
   400: #f5b3c9,
   500: #F4ABC4,
   600: #db99b0,
-  700: #c3889c
-);
+  700: #c3889c,
+  contrast:(
 
+  )
+);
+$initial-palette: (
+    50: #ffffff,
+    100: #dde6f3,
+    200: #b4c9e4,
+    300: #7fa3d1,
+    400: #6992c9,
+    500: #5282c1,
+    600: #4072b4,
+    700: #38649d,
+    800: #305687,
+    900: #284770,
+    A100: #ffffff,
+    A200: #dde6f3,
+    A400: #6992c9,
+    A700: #38649d,
+    contrast: (
+        
+    )
+);
 $shoppingAccent-palette: (
   400: #595B83,
   500: #333456,
-  600: #060930
+  600: #060930,
+  contrast:(
+
+  )
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
