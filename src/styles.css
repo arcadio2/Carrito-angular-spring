@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Kaisei;
+    src: url(./fonts/KaiseiDecol-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Kaisei;
+    src: url(./fonts/KaiseiDecol-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Courgette;
+    src: url(./fonts/Courgette-Regular.ttf);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Kaisei, Roboto, "Helvetica Neue", sans-serif; }

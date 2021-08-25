@@ -1,0 +1,49 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$shopping-palette: (
+  300: #f6bbcf,
+  400: #f5b3c9,
+  500: #F4ABC4,
+  600: #db99b0,
+  700: #c3889c
+);
+
+$shoppingAccent-palette: (
+  400: #595B83,
+  500: #333456,
+  600: #060930
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$carritoApp-primary: mat.define-palette($shopping-palette, 500);
+$carritoApp-accent: mat.define-palette($shoppingAccent-palette, A500, A400, A600);
+
+// The warn palette is optional (defaults to red).
+$carritoApp-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$carritoApp-theme: mat.define-light-theme((
+  color: (
+    primary: $carritoApp-primary,
+    accent: $carritoApp-accent,
+    warn: $carritoApp-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($carritoApp-theme);
+

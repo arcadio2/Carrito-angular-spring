@@ -1,0 +1,26 @@
+.menu__container {
+    overflow: hidden;
+}
+.menu__title {
+    font-family: Courgette;
+    font-size: 50px;
+    flex-grow: 2;
+    margin: 20px;
+}
+.menu__upside {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu__actionIn {
+    display: flex;
+}
+.menu__signIn {
+    margin: 0 20px;
+}
+.menu__login {
+    margin: 0 20px;
+}
+.pointer {
+    cursor: pointer;
+}
