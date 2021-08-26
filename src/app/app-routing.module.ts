@@ -5,11 +5,11 @@ import { HomeComponent } from './shared/components/home/home.component';
 const routes: Routes = [
   {
     path: 'home',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'auth',
-    loadChildren: ()=> import('./auth/auth.module').then((m) =>m.AuthModule )
+    loadChildren: () => import('./auth/auth.module').then((m) =>m.AuthModule )
   },
   {
     path: '**',

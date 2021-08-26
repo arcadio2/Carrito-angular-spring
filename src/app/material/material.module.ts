@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 /**AQUI SE VAN A IMPORTAR TODOS LOS MODULOS DE MATERIAL QUE NECESITEMSO Y SOLO
@@ -8,7 +9,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   exports:[
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }
