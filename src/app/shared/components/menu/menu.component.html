@@ -2,13 +2,15 @@
     <div class="menu__upside">
         <h2 class="menu__title pointer" routerLink="/home" (click)="handleActivateMenu()">Shopping Car</h2>
         <div class="menu__actionIn">
+            <mat-icon aria-hidden="false" aria-label="Login icon">account_circle</mat-icon>
+
             <div class="menu__login pointer" routerLink="/auth" (click)="handleDeactivateMenu()">login</div>
             <div class="menu__signIn pointer" routerLink="/auth/register" (click)="handleDeactivateMenu()">SignIn</div>
         </div>
     </div>
     <div class="menu__tabs" *ngIf="menuActive">
-        <mat-tab-group mat-align-tabs="center">
-            <mat-tab *ngFor="let tipo of tipoRopa" [label]="tipo">Ropa de {{tipo | lowercase}}
+        <mat-tab-group mat-align-tabs="center" >
+            <mat-tab *ngFor="let tipo of tipoRopa" [label]="tipo">
                 <app-ropa [tipoRopa]="tipo"></app-ropa>
             </mat-tab> 
             

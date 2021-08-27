@@ -1,3 +1,14 @@
 
-
-<h1>El tipo de ropa es: {{tipoRopa}}</h1>
+<mat-sidenav-container>
+    <mat-sidenav>
+        <h1>Menu</h1>
+    </mat-sidenav>
+    <mat-toolbar>
+        <mat-tab-group>
+            <mat-tab [label]="item" *ngFor="let item of items"> {{item}} </mat-tab>
+            
+                
+        </mat-tab-group>
+        </mat-toolbar>
+</mat-sidenav-container>
+<h1></h1>
