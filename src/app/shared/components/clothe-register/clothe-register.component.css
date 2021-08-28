@@ -1,0 +1,10 @@
+.clotheRegister__container {
+    display: flex;
+}
+.clotheCreation__form {
+    display: flex;
+    flex-direction: column;
+}
+.clotheCreation__input {
+    margin-bottom: 15px;
+}

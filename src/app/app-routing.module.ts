@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './shared/home/home.component';
+import { ClotheRegisterComponent } from './shared/components/clothe-register/clothe-register.component';
+import { HomeComponent } from './shared/components/home/home.component';
 
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'admin/clothe/register',
+    component: ClotheRegisterComponent
   },
   {
     path: 'auth',

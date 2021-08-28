@@ -29,7 +29,9 @@ $shoppingAccent-palette: (
   500: #333456,
   600: #060930,
   contrast:(
-
+    400: rgba(0,0,0,.2),
+    500: rgba(0,0,0,.2),
+    600: rgba(0,0,0,.2),
   )
 );
 
@@ -37,7 +39,7 @@ $shoppingAccent-palette: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $carritoApp-primary: mat.define-palette($shopping-palette, 500);
-$carritoApp-accent: mat.define-palette($shoppingAccent-palette, A500, A400, A600);
+$carritoApp-accent: mat.define-palette($shoppingAccent-palette);
 
 // The warn palette is optional (defaults to red).
 $carritoApp-warn: mat.define-palette(mat.$red-palette);

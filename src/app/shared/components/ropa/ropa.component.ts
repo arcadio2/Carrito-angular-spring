@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-ropa',
@@ -7,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RopaComponent implements OnInit {
   @Input() tipoRopa:string=''; 
+  color: ThemePalette = 'accent';
+
   subdivisiones = [
     {
       persona:"Niño",
