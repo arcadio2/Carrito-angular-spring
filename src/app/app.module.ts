@@ -9,6 +9,7 @@ import { MaterialModule } from './material/material.module';
 import { RopaComponent } from './shared/components/ropa/ropa.component';
 import { HomeComponent } from './shared/components/home/home.component';
 import { ClotheRegisterComponent } from './shared/components/clothe-register/clothe-register.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ClotheRegisterComponent } from './shared/components/clothe-register/clo
     MenuComponent,
     RopaComponent,
     HomeComponent,
-    ClotheRegisterComponent
+    ClotheRegisterComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,

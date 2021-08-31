@@ -1,0 +1,26 @@
+<mat-card class="product__card">
+  <img
+    mat-card-image
+    src="{{ data.image }}"
+    alt="{{ data.title }}"
+    class="product__image"
+  />
+  <mat-card-title>{{ data.title }}</mat-card-title>
+  <mat-card-content class="product__text">{{ data.price }}</mat-card-content>
+  <mat-card-content class="product__text">{{
+    data.description
+  }}</mat-card-content>
+  <mat-card-actions class="product__actions">
+    <mat-form-field class="product__select">
+      <mat-label>Talla</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let size of data.sizes" [value]="size">{{
+          size
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary">
+        Agregar al carrito de compra
+    </button>
+  </mat-card-actions>
+</mat-card>

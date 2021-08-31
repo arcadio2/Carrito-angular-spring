@@ -1,5 +1,7 @@
 .clotheRegister__container {
     display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
 }
 .clotheCreation__form {
     display: flex;
@@ -7,4 +9,9 @@
 }
 .clotheCreation__input {
     margin-bottom: 15px;
+}
+@media screen and (max-width: 400px) {
+    .clotheRegister__container {
+        margin: 0px;
+    }
 }

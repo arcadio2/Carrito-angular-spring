@@ -1,0 +1,19 @@
+.product__card {
+    max-width: 300px;
+    height: auto;
+}
+.product__image {
+    max-height: 400px;   
+}
+.product__text {
+    font-family: Kaisei, Roboto, "Helvetica Neue", sans-serif;
+}
+.product__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.product__select {
+    width: 80px
+}
