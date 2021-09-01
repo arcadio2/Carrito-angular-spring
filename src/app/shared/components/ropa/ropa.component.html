@@ -3,12 +3,8 @@
     <mat-sidenav>
         <h1>Menu</h1>
     </mat-sidenav>
-    <mat-toolbar>
-        <mat-tab-group>
-            <mat-tab [label]="item" *ngFor="let item of items"></mat-tab>
-            
-                
-        </mat-tab-group>
-        </mat-toolbar>
+        <nav mat-tab-nav-bar  >
+            <a mat-tab-link  *ngFor="let item of items" (click)="peticion(item)">{{item}}</a>
+        </nav>
 </mat-sidenav-container>
 <h1></h1>

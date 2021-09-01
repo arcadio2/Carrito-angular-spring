@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ropa',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RopaComponent implements OnInit {
   @Input() tipoRopa:string=''; 
+  @Output() newItemEvent = new EventEmitter<string>();
   subdivisiones = [
     {
       persona:"Niño",
@@ -35,5 +36,10 @@ export class RopaComponent implements OnInit {
     }); 
     
   }
-
+  peticion(item:string){
+    //TODO: servicio 
+    this.newItemEvent.emit(item);
+    console.log(item); 
+    console.log("dsasad");
+  }
 }

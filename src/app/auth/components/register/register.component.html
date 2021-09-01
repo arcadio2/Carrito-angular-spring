@@ -1,1 +1,48 @@
-<p>register works!</p>
+
+    <mat-toolbar>Este es el Registro</mat-toolbar>
+
+    <div fxLayout="row wrap" fxFlex.xs="column" fxLayoutGap="20px" fxLayoutAlign="center" class="login-container">
+        <div fxFlex="20"  fxFlex.lg="60" fxFlex.sm="30" class="login">
+            <mat-card class="sombra">
+                <mat-card-content>
+                <h1 class="mat-display-1"><strong>Regitrarse</strong></h1>
+                
+                <form [formGroup]="miFormulario" autocomplete="off">
+                    <div fxLayout="col"> 
+                    <mat-form-field appearance="fill" class="full-width-input">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput type="text" placeholder="Correo" formGroupName="email">  
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                    </div>
+                    <div fxLayout="col l-container">  
+                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Contraseña" 
+                                formGroupName="password"  [attr.aria-label]="'Hide password'" 
+                                [attr.aria-pressed]="hide" matInput [type]="hide ? 'password' : 'text'">  
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        
+                        </mat-form-field>
+                    </div>
+                    <mat-error *ngIf="1">
+                        Las credenciales son inválidas
+                    </mat-error>
+                    <button mat-raised-button  aria-label="Iniciar sesión" class="full-width-input loginbutton" >
+                        <mat-icon>login</mat-icon>
+                        Iniciar sesión
+                    </button>
+                    <br><br>
+                    <h4>¿No tienes cuenta?</h4>
+                    <a mat-raised-button routerLink="." color="warn" class="register">Crear una cuenta</a>
+                </form>
+            </mat-card-content>
+            </mat-card>
+        
+        </div>
+        
+    </div>
+    
+    

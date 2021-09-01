@@ -1,0 +1,73 @@
+.l-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+  
+  h1 {
+    text-align: center;
+  }
+  mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    border-radius: 20px;
+
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+ .full-width-input{
+     width: 100%;
+ }
+  
+
+ .sombra{ 
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(66,66,66,0.42);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(66,66,66,0.42);
+    box-shadow: 0px 5px 15px 0px rgba(66,66,66,0.42); 
+    background-color: white;
+    padding: 20px; 
+    border-radius: 17px; 
+}
+
+.login{
+    margin: 0;
+    font-family: sans-serif;
+}
+/*
+.login-container{
+    background-image: linear-gradient(to top, gray 0%, white 100%);
+}
+
+
+input:active {
+    border: none;
+    border: 2px solid pink;
+}
+*/
+.loginbutton{
+    background-color: #f184ec;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.register{
+    background-color: #32b122;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

@@ -10,7 +10,7 @@
     </div>
     <div class="menu__tabs" *ngIf="menuActive">
         <mat-tab-group mat-align-tabs="center" >
-            <mat-tab *ngFor="let tipo of tipoRopa" [label]="tipo">
+            <mat-tab *ngFor="let tipo of tipoRopa" [label]="tipo" >
                 <app-ropa [tipoRopa]="tipo"></app-ropa>
             </mat-tab> 
             
