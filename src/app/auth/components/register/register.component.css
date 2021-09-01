@@ -21,7 +21,9 @@
     text-align: center;
   }
   mat-card {
-    max-width: 400px;
+    max-width: 500px;
+    min-width:300px;
+    width: 400px; 
     margin: 2em auto;
     text-align: center;
     border-radius: 20px;
@@ -49,6 +51,16 @@
 .login{
     margin: 0;
     font-family: sans-serif;
+}
+
+.min-width-input{
+    width: 47%; 
+}
+.separate {
+    border-top: 12px solid rgb(255, 255, 255);
+    border-right: 12px solid rgb(255, 255, 255);
+    border-bottom: 12px solid rgb(255, 255, 255);
+    border-left: 12px solid rgb(255, 255, 255);
 }
 /*
 .login-container{

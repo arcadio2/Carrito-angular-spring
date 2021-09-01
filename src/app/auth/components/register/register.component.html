@@ -1,13 +1,35 @@
 
-    <mat-toolbar>Este es el Registro</mat-toolbar>
 
-    <div fxLayout="row wrap" fxFlex.xs="column" fxLayoutGap="20px" fxLayoutAlign="center" class="login-container">
-        <div fxFlex="20"  fxFlex.lg="60" fxFlex.sm="30" class="login">
+    <div fxLayout="row wrap"  fxLayoutGap="20px" fxLayoutAlign="center" class="login-container">
+        <div fxFlex="20"  fxFlex.lg="60" fxFlex.sm="30" class="login" fxLayout="column" >
             <mat-card class="sombra">
                 <mat-card-content>
                 <h1 class="mat-display-1"><strong>Regitrarse</strong></h1>
                 
                 <form [formGroup]="miFormulario" autocomplete="off">
+                    <div fxLayout="col"> 
+                        <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput type="text" placeholder="Nombre" formGroupName="name">  
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="col"> 
+                        <div fxLayout="row wrap">
+                        
+                            <mat-form-field appearance="fill" class="min-width-input">
+                            <mat-label>Apellido Paterno</mat-label>
+                            <input matInput type="text" placeholder="Apellido Paterno" formGroupName="appat">  
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            </mat-form-field>
+                            <div class="separate"></div>
+                            <mat-form-field appearance="fill" class="min-width-input">
+                            <mat-label>Apellido Paterno</mat-label>
+                            <input matInput type="text" placeholder="Apellido Paterno" formGroupName="appat">  
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
                     <div fxLayout="col"> 
                     <mat-form-field appearance="fill" class="full-width-input">
                     <mat-label>E-mail</mat-label>
@@ -16,7 +38,7 @@
                     </mat-form-field>
                     </div>
                     <div fxLayout="col l-container">  
-                    <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-form-field appearance="fill" class="full-width-input">
                         <mat-label>Contraseña</mat-label>
                         <input matInput type="password" placeholder="Contraseña" 
                                 formGroupName="password"  [attr.aria-label]="'Hide password'" 
@@ -24,7 +46,17 @@
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button>
-                        
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="col l-container">  
+                        <mat-form-field appearance="fill" class="full-width-input">
+                        <mat-label>Repetir contraseña</mat-label>
+                        <input matInput type="password" placeholder="Repetir contraseña" 
+                                formGroupName="rpassword"  [attr.aria-label]="'Hide password'" 
+                                [attr.aria-pressed]="hide" matInput [type]="hide2 ? 'password' : 'text'">  
+                        <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
                         </mat-form-field>
                     </div>
                     <mat-error *ngIf="1">
@@ -35,8 +67,8 @@
                         Iniciar sesión
                     </button>
                     <br><br>
-                    <h4>¿No tienes cuenta?</h4>
-                    <a mat-raised-button routerLink="." color="warn" class="register">Crear una cuenta</a>
+                    <h4>¿Ya tienes cuenta?</h4>
+                    <a mat-raised-button routerLink="/auth" color="warn" class="register">Iniciar sesión</a>
                 </form>
             </mat-card-content>
             </mat-card>

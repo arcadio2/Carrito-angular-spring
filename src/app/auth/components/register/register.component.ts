@@ -8,9 +8,13 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   hide = true;
+  hide2 = true; 
   miFormulario: FormGroup= this.fb.group({
+    name:['',[Validators.required]],
+    appat:['', [Validators.required]],
     email:['',[Validators.required]],
-    password:['',[Validators.required]]
+    password:['',[Validators.required]],
+    rpassword:['',[Validators.required]]
   })
   constructor(private fb:FormBuilder) { }
 
